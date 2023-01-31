@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Sen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #efefef;
+  background-size: cover;
+}
+
+/*---- HEADER NAV ----*/
+
+.menu__logo a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+.menu__logo i {
+  font-size: 30px;
+}
+
+.menu {
+  /*background-image: linear-gradient(180deg, #667eea 0, #764ba2 100%);*/
+  background-color: #1a202c;
+  height: 70px;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.menu__links {
+  height: 100%;
+  transition: transform 0.5s;
+  display: flex;
+}
+
+.menu__item {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  --transform: rotate(0);
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu__link:hover {
+  background-color: #5e7094;
+}
+
+.menu__arrow {
+  transform: var(--transform);
+  transition: transform 0.3s;
+  display: block;
+  margin-left: 3px;
+}
+
+.menu__nesting {
+  list-style: none;
+  transition: clip-path 0.3s;
+  clip-path: var(--clip);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max-content;
+  transform: translateY(100%);
+  /**background-image: linear-gradient(180deg, #667eea 0, #764ba2 100%);*/
+  background-color: #1a202c;
+}
+
+.menu__link--inside {
+  padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover {
+  background-color: #667eea;
+}
+
+.menu__hamburguer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu__img {
+  display: block;
+  width: 36px;
+}
+
+/*------ FONDO -----*/
+.fondo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #efefef;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/programacion.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  cursor: context-menu;
+}
+
+.fondo img {
+  border: solid 3px #5e7094;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.fondo img:hover {
+  border: solid 4px #667eea;
+  width: 350px;
+  height: 350px;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+.titulo {
+  font-size: 70px;
+  padding: 15px 0;
+  margin-bottom: 14px;
+}
+
+.fondo i {
+  margin: 10px;
+  color: #667eea;
+  font-size: 22px;
+}
+.fondo i:hover {
+  rotate: 360deg;
+  transition: 0.3s;
+}
+.analist {
+  color: #fff;
+}
+
+/*---- MAIN ----*/
+main {
+  background-color: #000;
+  opacity: 0.9;
+  color: #fff;
+  height: 1390px;
+  cursor: context-menu;
+}
+
+/*---- Subtitulo: PORTAFOLIO ----*/
+#portafolio {
+  text-align: center;
+  font-weight: 600;
+  padding: 18px 0;
+  font-size: 40px;
+}
+
+#portafolio:hover {
+  color: #764ba2;
+  transition: 0.5s;
+}
+
+/*---- section ---*/
+
+.textos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contenedor {
+  width: 99%;
+  max-width: 2000px;
+  overflow: hidden;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/*---- CAJAS ----*/
+.cajas {
+  width: 900px;
+  margin: 10px;
+}
+.cajas h2 {
+  display: inline-block;
+  font-size: 25px;
+  border-right: solid 4px #764ba2;
+  padding: 0px 13px 2px 0;
+  margin: 20px 0;
+  color: #764ba2;
+}
+
+.cajas b:hover {
+  color: #667eea;
+  transition: 0.6s 0.1s;
+}
+
+.habilidades li {
+  margin-left: 20px;
+}
+.cajas,
+ul,
+li {
+  font-size: 15px;
+}
+.academica li,
+.experiencia li,
+.habilidades li {
+  margin-bottom: 5px;
+}
+.form__academica ul,
+.expe_laboral ul,
+.informatica ul {
+  list-style-type: none;
+}
+.lenj-pro,
+.data__base {
+  padding-top: 15px;
+  margin-left: 10px;
+}
+.data__base a {
+  text-decoration: none;
+  color: #fff;
+}
+.lenj-pro i,
+.lenj-pro a,
+.data__base i {
+  font-size: 23px;
+  margin-right: 18px;
+}
+.icon {
+  margin: 10px 10px 10px 50px;
+}
+
+.contenedor b {
+  font-size: 20px;
+}
+
+/*---- FOOTER ----*/
+
+footer {
+  min-height: 80px;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  padding-top: 25px;
+  cursor: pointer;
+  background-image: linear-gradient(180deg, #667eea 0, #764ba2 100%);
+}
+#copy {
+  text-align: center;
+  opacity: 0.9;
+  color: #000;
+  font-family: "Sen", sans-serif;
+  font-size: 15px;
+  cursor: context-menu;
+}
+.redes {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+.redes a {
+  text-decoration: none;
+  color: #efefef;
+  padding: 15px;
+  font-size: 25px;
+}
+.redes a:hover {
+  rotate: 360deg;
+  transition: 0.5s 0.1s;
+}
+.fa-instagram:hover {
+  color: #d300c5;
+}
+.fa-twitter:hover {
+  color: rgb(29, 155, 240);
+}
+.fa-github:hover {
+  color: #24292f;
+}
+.fa-linkedin:hover {
+  color: #0a66c2;
+}
+.fa-whatsapp:hover {
+  color: #25d366;
+}
+
+/*---- BANDERA ARG ----*/
+.arg a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.arg img {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+/*DISPOSITIVOS MOVILES*/
+@media (max-width: 1440px) {
+  /*---- MAIN ----*/
+  main {
+    height: 1390px;
+  }
+  .cajas {
+    width: 1370px;
+  }
+
+  /*---- FONDO -----*/
+  .fondo img {
+    border: solid 3px #5e7094;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .fondo img:hover {
+    border: solid 4px #667eea;
+    width: 330px;
+    height: 330px;
+    transition: 0.3s;
+    opacity: 0.9;
+  }
+}
+@media (max-width: 1024px) {
+  /*---- MAIN ----*/
+  .cajas {
+    width: 975px;
+  }
+
+  /*FOOTER*/
+  .arg img {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 768px) {
+  /*---- NAV ----*/
+  .menu__hamburguer {
+    display: flex;
+  }
+  .menu__item {
+    --clip: 0;
+    overflow: hidden;
+  }
+  .menu__item--active {
+    --transform: rotate(0);
+    --background: #5e7094;
+  }
+  .menu__item--show {
+    background-color: var(--background);
+  }
+  .menu__links {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    overflow-y: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    transform: translateX(100%);
+  }
+  .menu__links--show {
+    transform: unset;
+    width: 100%;
+  }
+  .menu__link {
+    padding: 25px 0;
+    padding-left: 30px;
+    height: auto;
+  }
+  .menu__arrow {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .menu__nesting {
+    display: grid;
+    position: unset;
+    width: 100%;
+    transform: translateY(0);
+    height: 0;
+    transition: height 0.3s;
+  }
+  .menu__link--inside {
+    width: 90%;
+    margin-left: auto;
+    border-left: 1px solid #798499;
+  }
+
+  /*---- FONDO ----*/
+  .fondo img {
+    border: solid 3px #5e7094;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .fondo img:hover {
+    border: solid 4px #667eea;
+    width: 310px;
+    height: 310px;
+    transition: 0.3s;
+    opacity: 0.9;
+  }
+
+  /*---- MAIN ----*/
+  main {
+    height: 1430px;
+  }
+  #portafolio {
+    font-size: 30px;
+    padding: 18px 0 0 0;
+  }
+  #portafolio:hover {
+    color: #fff;
+    transition: none;
+  }
+  .cajas {
+    width: 720px;
+  }
+  .cajas b:hover {
+    color: #fff;
+    transition: none;
+  }
+  .academica li,
+  .experoencia li,
+  .habilidades li {
+    margin-bottom: 4px;
+  }
+  /*---- FOOTER ----*/
+  .redes a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 23px;
+  }
+  .redes a:hover {
+    font-size: 23px;
+    rotate: 0deg;
+  }
+
+  /*--- BANDERA ARG ----*/
+  .arg img {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  /*---- FONDO ----*/
+  .titulo {
+    font-size: 40px;
+    margin: 0 8px;
+  }
+  .fondo h3,
+  .fondo i {
+    font-size: 15px;
+  }
+  .fondo img {
+    width: 170px;
+    height: 170px;
+  }
+  .fondo img:hover {
+    width: 190px;
+    height: 190px;
+  }
+
+  /*---- MAIN ----*/
+  main {
+    height: 1500px;
+  }
+  .cajas {
+    width: 395px;
+  }
+  .cajas,
+  ul,
+  li {
+    font-size: 14px;
+  }
+  .lenj-pro {
+    padding: 10px 0;
+  }
+  .cajas h2 {
+    padding: 0px 10px 2px 0;
+  }
+
+  /*---- FOOTER ---*/
+  .redes a {
+    padding: 15px;
+    font-size: 23px;
+    color: #fff;
+  }
+  .redes a:hover {
+    font-size: 23px;
+    rotate: 0deg;
+    color: #fff;
+  }
+}
+@media (max-width: 375px) {
+  /*---- MAIN ----*/
+  main {
+    height: 1490px;
+  }
+  #portafolio {
+    font-size: 28px;
+  }
+  .contenedor {
+    padding-bottom: 1px;
+  }
+  .contenedor b {
+    font-size: 19px;
+  }
+  .cajas {
+    width: 330px;
+    margin: 10px;
+  }
+  .cajas h2 {
+    font-size: 18px;
+  }
+  .informatica li {
+    margin-bottom: 8px;
+  }
+  .lenj-pro i,
+  .lenj-pro a,
+  .data__base i {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  .lenj-pro,
+  .data__base {
+    margin-top: 5px;
+  }
+  .icon {
+    margin: 10px 5px 5px 20px;
+  }
+}
+@media (max-width: 320px) {
+  /*----- FONDO ----*/
+
+  .titulo {
+    font-size: 32px;
+  }
+  .analist i {
+    margin: 5px;
+    font-size: 15px;
+  }
+  .analist i:hover {
+    font-size: 15px;
+    transition: none;
+  }
+  .analist {
+    font-size: 13px;
+  }
+
+  /*MAIN*/
+  main {
+    height: 1450px;
+  }
+  .cajas {
+    width: 300px;
+  }
+
+  .cajas h2 {
+    padding-bottom: 10px;
+  }
+  .cajas b {
+    font-size: 16px;
+  }
+  .cajas,
+  ul,
+  li {
+    font-size: 13px;
+  }
+  .informatica li {
+    margin-bottom: 6px;
+  }
+  /*FOOTER*/
+  #copy {
+    font-size: 13px;
+  }
+  .redes a {
+    color: #fff;
+    font-size: 20px;
+  }
+  .redes a:hover {
+    rotate: 0deg;
+    color: #fff;
+    font-size: 20px;
+  }
+}
